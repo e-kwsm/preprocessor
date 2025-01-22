@@ -283,7 +283,7 @@ BOOST_PP_IF(1, true, false) == true;
 	to nothing before the <b>BOOST_PP_IF</b> would be properly expanded.
 </div>
 <div>
-	<b>How:</b>&nbsp; BOOST_PP_IF is defined for the entire repeat range (psuedo code):
+	<b>How:</b>&nbsp; BOOST_PP_IF is defined for the entire repeat range (pseudo code):
 </div>
 <div><pre>
 #define BOOST_PP_IF(c, THEN, ELSE) BOOST_PP_IF ## c(THEN, ELSE)
