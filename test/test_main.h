@@ -14,18 +14,14 @@
 # ifndef BOOST_LIBS_PREPROCESSOR_REGRESSION_TEST_MAIN_H
 # define BOOST_LIBS_PREPROCESSOR_REGRESSION_TEST_MAIN_H
 #
-#if defined(__cplusplus)
 #include <cstdio>
 #if !defined(_STLP_MSVC) || _STLP_MSVC >= 1300
 namespace std { }
 using namespace std;
 #endif
-#else
-#include <stdio.h>
-#endif
 
-int main(void) {
-    printf("pass " __TIME__);
+int main() {
+    printf("pass %s\n", __TIME__);
     return 0;
 }
 
