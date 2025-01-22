@@ -220,7 +220,8 @@ jobs:
           REF=${GITHUB_BASE_REF:-$GITHUB_REF}
           REF=${REF#refs/heads/}
           echo REF: $REF
-          BOOST_BRANCH=develop && [ "$REF" == "master" ] && BOOST_BRANCH=master || true
+          BOOST_BRANCH=develop
+          if [ "$REF" == "master" ]; then BOOST_BRANCH=master; fi
           echo BOOST_BRANCH: $BOOST_BRANCH
           cd ..
           git clone -b $BOOST_BRANCH --depth 1 https://github.com/boostorg/boost.git boost-root
@@ -331,7 +332,8 @@ jobs:
           REF=${GITHUB_BASE_REF:-$GITHUB_REF}
           REF=${REF#refs/heads/}
           echo REF: $REF
-          BOOST_BRANCH=develop && [ "$REF" == "master" ] && BOOST_BRANCH=master || true
+          BOOST_BRANCH=develop
+          if [ "$REF" == "master" ]; then BOOST_BRANCH=master; fi
           echo BOOST_BRANCH: $BOOST_BRANCH
           cd ..
           git clone -b $BOOST_BRANCH --depth 1 https://github.com/boostorg/boost.git boost-root
@@ -379,7 +381,8 @@ jobs:
           REF=${GITHUB_BASE_REF:-$GITHUB_REF}
           REF=${REF#refs/heads/}
           echo REF: $REF
-          BOOST_BRANCH=develop && [ "$REF" == "master" ] && BOOST_BRANCH=master || true
+          BOOST_BRANCH=develop
+          if [ "$REF" == "master" ]; then BOOST_BRANCH=master; fi
           echo BOOST_BRANCH: $BOOST_BRANCH
           cd ..
           git clone -b $BOOST_BRANCH --depth 1 https://github.com/boostorg/boost.git boost-root
@@ -437,7 +440,8 @@ jobs:
           REF=${GITHUB_BASE_REF:-$GITHUB_REF}
           REF=${REF#refs/heads/}
           echo REF: $REF
-          BOOST_BRANCH=develop && [ "$REF" == "master" ] && BOOST_BRANCH=master || true
+          BOOST_BRANCH=develop
+          if [ "$REF" == "master" ]; then BOOST_BRANCH=master; fi
           echo BOOST_BRANCH: $BOOST_BRANCH
           cd ..
           git clone -b $BOOST_BRANCH --depth 1 https://github.com/boostorg/boost.git boost-root
